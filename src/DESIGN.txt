@@ -1,0 +1,7 @@
+Created a folder called 'src' as per submission format.
+In 'src' created a folder called 'php'.
+In 'src' created' a folder called 'html'
+In 'src' created a folder called 'css'.
+Add 'Template' folder to 'php' folder and add miniTemplator class file to it.
+
+

@@ -1,0 +1,80 @@
+    <!--
+        Assignment 1 Web Database Appliactions
+        By Christopher Noble s3082661
+        SP 2 2015
+    -->
+<html>
+
+    <head>
+        <title>Winestore Search Results</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navagation Bar using bootstrap -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="search.php">Winestore Searcher</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="search.php">Search</a></li>
+                        <li class="active"><a href="#">Results</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+         <!-- Container for responsive panels form bootstrap and minitemplator-->
+        <div class="container">
+            <h3>Winestore Search Results</h3>
+
+             <!-- Table for database results using bootstrap classes for styling -->
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+
+                        <th>Wine Name</th>
+                        <th>Region Name</th>
+                        <th>Grape Variety</th>
+                        <th>Winery Name</th>
+                        <th>Cost ($)</th>
+                        <th>Year</th>
+                        <th>Stock on Hand</th>
+                        <th>Quantity Sold</th>
+                        <th>Sales Revenue ($) </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- $BeginBlock row -->
+                    <tr>
+                        <td align="right">${wineName}</td>
+                        <td align="right">${region}</td>
+                        <td align="right">${variety}</td>
+                        <td align="right">${wineryName}</td>
+                        <td align="right">${cost}</td>
+                        <td align="right">${year}</td>
+                        <td align="right">${onHand}</td>
+                        <td align="right">${qtySold}</td>
+                        <td align="right">${salesRev}</td>
+                    </tr>
+                    <!-- $EndBlock row -->
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+
+</html>

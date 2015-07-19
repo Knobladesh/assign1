@@ -1,0 +1,18 @@
+Logged onto EC2 instance using the Linux terminal using public terminal, private key and user detials.
+
+Updated Ubuntu server using update and upgrage from the terminal.
+
+Installed and started tasksel from the terminal.
+
+Using tasksel added LAMP server. Added password.
+
+Enabled mod rewrite on apache2 from the terminal.
+
+Set up document structure for the web server by
+	- took ownership of the www folder
+	- created and symbolic linked webroot folder to www/html folder so anything added to webroot will be available to be for apache to find.
+
+Created a phpInfo file and saved it to webroot.
+Resarted apache.
+
+Tested web server by using a web browser to see if phpInfo can be found.

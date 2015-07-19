@@ -1,0 +1,120 @@
+
+<html>
+
+    <head>
+        <title>Winestore Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Navagation Bar using bootstrap -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Winestore Searcher</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active" ><a href="#">Search</a></li>
+
+                        <li class="disabled"><a href="#">Results</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- Container for responsive panels form bootstrap -->
+        <div class="container">
+            <h2>Winestore Search</h2>
+             <!-- Search form again using bootstrap -->
+            <form id="myForm" name="myForm" action="answer.php" method="GET" role="form">
+                <div class="form-group ${displaywineNameError} has-feedback">
+                    <label for="wineName">Wine Name Search:</label>
+                    <input type="text" class="form-control" name="wineName">
+                    <span class="help-block">${wineNameError}</span>
+                </div>
+
+                <div class="form-group ${displaywineryNameError} has-feedback">
+                    <label for="wineryName">Winery Name Search:</label>
+                    <input type="text" class="form-control" name="wineryName">
+                    <span class="help-block">${wineryNameError}</span>
+                </div>
+
+                <div class="form-group ${displayregionNameError} has-feedback">
+                    <label for="regionName">Winery Region</label>
+                    <select value="regionName" class="form-control" name="regionName">
+                        <!-- $BeginBlock region -->
+                        <option value="${regionName}">${regionName}</option>
+                        <!-- $EndBlock region -->
+                    </select>
+                    <span class="help-block">${regionNameError}</span>
+                </div>
+
+                <div class="form-group ${displaygrapeVarError} has-feedback">
+                    <label for="grapeVar">Grape Variety</label>
+                    <select value="grapeVar" class="form-control" name="grapeVar">
+                        <option value="">All Varieties</option>
+                        <!-- $BeginBlock grapeVar -->
+                        <option value="${grapeVarName}">${grapeVarName}</option>
+                        <!-- $EndBlock grapeVar -->
+                    </select>
+                    <span class="help-block">${grapeVarError}</span>
+                </div>
+
+                <div class="form-group ${errorminYearError} has-feedback">
+
+                    <label for="minYear">Min Year</label>
+                    <input type="number" class="form-control" name="minYear" min="${minYear}" max="${maxYear}">
+                    <span class="help-block">${minYearError}</span>
+                </div>
+
+                <div class="form-group ${displaymaxYearError} has-feedback">
+                    <label for="maxYear">Max Year</label>
+                    <input type="number" class="form-control" name="maxYear" min="${minYear}" max="${maxYear}">
+                    <span class="help-block">${maxYearError}</span>
+                </div>
+
+
+                <div class="form-group ${displayminCostError} has-feedback">
+
+                    <label for="minCost">Min Cost</label>
+                    <input type="number" class="form-control" name="minCost" >
+                    <span class="help-block">${minCostError}</span>
+
+                </div>
+                <div class="form-group ${displaymaxCostError} has-feedback">
+
+                    <label for="maxCost">Max Cost</label>
+                    <input type="number" class="form-control" name="maxCost" >
+                    <span class="help-block">${maxCostError}</span>
+
+                </div>
+
+                <div class="form-group ${displayorderedError} has-feedback">
+
+                    <label for="ordered">Minimun Sold</label>
+                    <input type="number" class="form-control" name="ordered" min="0" >
+                    <span class="help-block">${orderedError}</span>
+                </div>
+
+                <div class="form-group ${displaystockerror} has-feedback">
+
+                    <label for="stock">Minimun in Stock</label>
+                    <input type="number" class="form-control" name="stock" min="0"  >
+                    <span class="help-block">${stockError}</span>
+                </div>
+
+                <input type="submit" class="btn btn-default" name="send" value="Run Query">
+
+
+            </form>
+        </div>
+    </body>
+</html>

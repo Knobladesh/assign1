@@ -1,0 +1,13 @@
+Logged onto EC2 instance using the Linux terminal using public terminal, private key and user detials.
+
+Logged in to mySQL using user root.
+
+Created a databse called winestore.
+
+Created user 'a1' with a password then granted the user 'a1' access to the database winestore.
+
+Exited mysql.
+
+Downloaded winestore data from http:/bit.ly/winestore
+
+Logged back into mysql as user 'a1' and loaded the winestore data using the download file.
